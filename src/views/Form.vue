@@ -2,7 +2,7 @@
   <main>
     <section class="contact-form">
       <h1>Sign up for the Weekly Newsletter</h1>
-      <div>
+      <div class="contact-form__text">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
         officia, commodi eveniet eos laborum, consectetur aliquam hic odio sunt
         quibusdam quos itaque recusandae dolorum asperiores dolores qui ipsum,
@@ -106,14 +106,22 @@ export default {
 main {
   display: flex;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .contact-form {
   width: 60%;
-  padding: 10px;
   display: flex;
   flex-flow: column nowrap;
-  border-right: solid black 1px;
+  border-right: solid black 2px;
+}
+
+.contact-form h1 {
+  font-size: 1.5em;
+}
+
+.contact-form__text {
+  font-size: 0.7em;
 }
 
 .contact-form__input + .contact-form__input {

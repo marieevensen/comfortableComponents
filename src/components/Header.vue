@@ -7,7 +7,6 @@
     <RouterLink class="header__link" :to="{ name: 'form' }">Form</RouterLink>
     <RouterLink class="header__link" :to="{ name: 'slideshow' }">Slideshow</RouterLink>
     
-
     <!-- <RouterLink :to="{ name: 'Form' }">Form</RouterLink>
         <RouterLink :to="{ name: 'Slideshow' }">Slideshow</RouterLink> -->
   </header>
@@ -19,17 +18,16 @@
 <style>
 .header {
   border: 2px black solid;
-  display: flex;
-  padding: 1em 0.5em 0.5em 0.5em;
+  padding: 1em 0em 0.4em 0em;
   width: 100vw;
+  text-align: center;
 }
 
 .header__link {
-  justify-content: space-between;
-  text-align: center;
   text-decoration: none;
   color: var(--color);
   font-weight: bold;
   width: 100%;
+  margin: 0em 2em;
 }
 </style>

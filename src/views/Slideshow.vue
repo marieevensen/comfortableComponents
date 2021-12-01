@@ -75,7 +75,6 @@ export default {
 .slideshow {
   width: 60%;
   display: flex;
-  padding: 10px;
   padding-top: 100px;
   justify-content: space-evenly;
 }

@@ -97,6 +97,10 @@ export default {
   font-size: 0.8em;
 }
 
+.todo__text-box:focus {
+  background-color: black;
+}
+
 .todo__finished {
   margin: 20px 0px 20px 50px;
 }
