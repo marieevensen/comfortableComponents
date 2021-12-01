@@ -45,10 +45,6 @@ export default {
       });
     },
     finishedTask(index) {
-      return {
-        task: "",
-        finishedTasks: [ ],
-      },
       this.tasks.push({
         finished: this.task,
       });
@@ -63,7 +59,7 @@ export default {
 <style>
 .todo {
   display: flex;
-  width: 80vw;
+  width: 100%;
   justify-content: center;
   margin-top: 30px;
 }
