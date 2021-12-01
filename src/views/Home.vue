@@ -57,5 +57,5 @@ export default {
         height: 35vh;
         margin: 10px;
     }
-/* hallllllllaaaa */
+
 </style>
