@@ -70,10 +70,12 @@ export default {
 <style>
 .component-container {
   display: flex;
+  width: 100vw;
 }
 
 .slideshow {
   width: 60%;
+  padding: 20px;
   display: flex;
   padding-top: 100px;
   justify-content: space-evenly;

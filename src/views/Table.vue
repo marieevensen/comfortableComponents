@@ -1,20 +1,22 @@
 <template>
-	<table class="table">
-		<thead>
-			<tr>
-				<td><button @click="sortBy('fname')">First Name</button></td>
-				<td><button @click="sortBy('lname')">Last Name</button></td>
-				<td><button @click="sortBy('gender')">Gender</button></td>
-                <td><button @click="sortBy('job')">Job</button></td>
-			</tr>
-		</thead>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td><button @click="sortBy('fname')">First Name</button></td>
+                    <td><button @click="sortBy('lname')">Last Name</button></td>
+                    <td><button @click="sortBy('gender')">Gender</button></td>
+                    <td><button @click="sortBy('job')">Job</button></td>
+                </tr>
+            </thead>
 
-		<tbody>
-			<tr v-for="row in alphabeticalSort">
-				<td v-for="value in row">{{ value }}</td>
-			</tr>
-		</tbody>
-	</table>
+            <tbody>
+                <tr v-for="row in alphabeticalSort">
+                    <td v-for="value in row">{{ value }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </template>
 
 <script>
@@ -56,7 +58,7 @@
 
 <style>
     table {
-        margin-top: 1em;
+        margin-top: 2em;
         border-collapse: collapse;
         width: 70vw;
         margin-left: auto;
@@ -77,10 +79,10 @@
     }
 
     table tr {
-        border: 1px solid black;
+        border: 1.5px solid black;
     }
 
     table td {
-        padding: 0.5em;
+        padding: 0.5em 1em 0.5em 1em;
     }
 </style>

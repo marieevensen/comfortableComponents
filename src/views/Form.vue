@@ -114,6 +114,7 @@ main {
   display: flex;
   flex-flow: column nowrap;
   border-right: solid black 2px;
+  padding: 20px;
 }
 
 .contact-form h1 {
@@ -136,6 +137,7 @@ main {
 
 .contact-info {
   width: 40%;
+  padding: 20px;
 }
 
 .contact-info__output {

@@ -71,12 +71,14 @@ export default {
 .quiz {
   display: flex;
   margin-top: 30px;
+  width: 100vw;
 }
 
 .quiz__left {
   border-right: 2px black solid;
   margin: 20px 100px;
   display: flex;
+  width: 50%;
 }
 
 .quiz__title {
@@ -94,12 +96,16 @@ export default {
   color: black;
 }
 
-.quiz__options {
-  margin: 150px 50px 0px 200px;
+.quiz__right {
+  width: 50%;
 }
 
+/* .quiz__options {
+  margin: 150px 50px 0px 200px;
+} */
+
 .quiz__score {
-  margin: 20px 0px 20px 50px;
+  /* margin: 20px 0px 20px 50px; */
   font-size: 2em;
   font-weight: bold;
 }
