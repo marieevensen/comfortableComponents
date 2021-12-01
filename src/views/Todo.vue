@@ -32,7 +32,7 @@ export default {
   data() {
     return {
       task: "",
-      tasks: [{ name: "" }],
+      tasks: [ ],
     };
   },
 
@@ -45,6 +45,10 @@ export default {
       });
     },
     finishedTask(index) {
+      return {
+        task: "",
+        finishedTasks: [ ],
+      },
       this.tasks.push({
         finished: this.task,
       });
