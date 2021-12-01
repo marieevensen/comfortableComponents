@@ -2,7 +2,7 @@
     <main class="main">
         <div class="main__grid">
             <div class="main__grid-box">
-                <div class="e"><Todo /></div>
+                <Todo />
             </div>
             <div class="main__grid-box">
                 hei
@@ -56,10 +56,6 @@ export default {
         width: 30vw;
         height: 35vh;
         margin: 10px;
-    }
-
-    .e {
-        position: absolute;
     }
 
 </style>
