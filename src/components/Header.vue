@@ -1,12 +1,12 @@
 <template>
   <header class="header">
+    <RouterLink class="header__link" :to="{ name: 'home' }">Home</RouterLink>
     <RouterLink class="header__link" :to="{ name: 'todo' }">ToDo</RouterLink>
     <RouterLink class="header__link" :to="{ name: 'table' }">Table</RouterLink>
     <RouterLink class="header__link" :to="{ name: 'quiz' }">Quiz</RouterLink>
     <RouterLink class="header__link" :to="{ name: 'form' }">Form</RouterLink>
-    <RouterLink class="header__link" :to="{ name: 'slideshow' }"
-      >Slideshow</RouterLink
-    >
+    <RouterLink class="header__link" :to="{ name: 'slideshow' }">Slideshow</RouterLink>
+    
 
     <!-- <RouterLink :to="{ name: 'Form' }">Form</RouterLink>
         <RouterLink :to="{ name: 'Slideshow' }">Slideshow</RouterLink> -->

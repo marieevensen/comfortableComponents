@@ -20,11 +20,7 @@
     </div>
     <div class="todo__finished">
       Finished Tasks:
-      <div
-        class="todo__finished-task"
-        v-for="(task, index) in tasks"
-        :value="task"
-      >
+      <div class="todo__finished-task" v-for="(task, index) in tasks" :value="task">
         {{ task.finished }}
       </div>
     </div>
