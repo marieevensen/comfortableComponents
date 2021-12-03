@@ -4,8 +4,8 @@
 			<div class="todo__title">To do today:</div>
 				<input class="todo__input-field" type="text" placeholder="Add your task here" v-model="task"/>
 				<button class="todo__submit-button" @click="addTask">Add</button>
-				<div>
-					<div class="todo__tasks" v-for="task in pendingTasks" :value="task">
+				<div class="todo__tasks">
+					<div class="todo__tasks__pending" v-for="task in pendingTasks" :value="task">
 						<button class="todo__delete-button" @click="deleteTask(index)">
 							<svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<g clip-path="url(#clip0_104_4)">
@@ -18,8 +18,8 @@
 								</defs>
 							</svg>	
 						</button>
-						<div>  {{ task.text }}</div> 
-						<input class="todo__check-box" @click="checkTask" type="checkbox"/>
+						<div class="todo__task-text">  {{ task.text }}</div> 
+						<button class="todo__check-box" @click="checkTask">ss</button>
 					</div>
 				</div>
 		</div>
@@ -75,7 +75,6 @@ export default {
 
 <style>
 	main {
-
 		width: 100vw;
 		display: flex;
 	}
@@ -97,14 +96,28 @@ export default {
 	}
 
 	.todo__tasks {
-		/* border: solid black ; */
+		margin-top: 10vh;
 		height: fit-content;
-		margin-top: 20%;
+
+	}
+
+	.todo__tasks__pending {
+		display: flex;
+		margin-top: 20px;
+	}
+
+	.todo__task-text {
+		display: block;
+		margin: 0px 10px 0px 10px;
 	}
 	
 	.finished-tasks {
 		width: 40%;
 		height: 85vh;
+		padding: 10px;
 		border-left: solid 2px black;
 	}
+
+
 </style>
+
