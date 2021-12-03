@@ -1,100 +1,172 @@
 <template>
-  <div class="quiz">
-    <div class="quiz__left">
-      <div class="quiz__questions">
-        <div class="quiz__title">Quiz</div>
-        <div class="quiz__que" v-for="question in questions" :value="question">
-          {{ question.hei }}
-        </div>
-      </div>
-      <div class="quiz__right">
-        <div class="quiz__options">
-          <label for="a" class="quiz__options-option">
-            <input type="radio" class="hidden" v-for="answer in questions"/>
-            Option 1 </label
-          ><br />
-          <label for="a" class="quiz__options-option">
-            <input type="radio" class="hidden" />
-            Option 2 </label
-          ><br />
-          <label for="a" class="quiz__options-option">
-            <input type="radio" class="hidden" />
-            Option 3 </label
-          ><br />
-          <label for="a" class="quiz__options-option">
-            <input type="radio" class="hidden" />
-            Option 4
-          </label>
-        </div>
-      </div>
+  	<div class="quiz">
+		<section class="quiz__questions">
+			<div class="quiz__question">
+				<div class="quiz__question__title">Quiz</div>
+				<div class="quiz__question__query">
+					{{ currentQuestion.query }}
+				</div>
+			</div>
+
+			<div class="quiz__options">
+				<button class="quiz__options-option">
+					{{ currentQuestion.options.a }}
+				</button>
+				
+				<button class="quiz__options-option">
+					{{ currentQuestion.options.b }}
+				</button>
+
+				<button class="quiz__options-option">
+					{{ currentQuestion.options.c }}
+				</button>
+
+				<button class="quiz__options-option">
+					{{ currentQuestion.options.d }}
+				</button>
+				
+				<div class="quiz__options__buttons">
+					<button @click="prevQuestion()">
+						<svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M8.01808 24.006L40.0181 24.0301" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M22.0286 10.0165L8.01809 24.006L22.0075 38.0165" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</button>
+					
+					<button @click="nextQuestion();score();">
+						<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M40.9997 25.094L9.00024 24.9059" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M26.9176 39.0115L40.9997 25.094L27.0822 11.012" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="quiz__score">
+			<div class="quiz__score__title">Score</div>
+			<div class="quiz__score__points">
+				Your score is {{ score }}/3
+			</div>
+      			<!--HER SKAL SCOREN STÅ^
+                	<div class="todo__finished-task" v-for="(task, index) in tasks" :value="task">
+                	Your score is{{ task.finished }}/10
+            	</div> -->
+		</section>
     </div>
-    <div class="quiz__score">
-      Score:
-      <!--HER SKAL SCOREN STÅ^
-                <div class="todo__finished-task" v-for="(task, index) in tasks" :value="task">
-                Your score is{{ task.finished }}/10
-            </div> -->
-    </div>
-  </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      question: "",
-      questions: [
-        {
-          hei: "Are you a boy?",
-          answers: { a: "yes", b: "no", c: "maybe", d: "not sure" },
-          correctAnswer: "b",
-        },
-      ],
-    };
-  },
-};
+	export default {
+		data() {
+			return {
+				index: 0,
+				score: 0,
+				questions: [
+					{
+						query: "Are you a boy?",
+						options: { a: "yes", b: "no", c: "maybe", d: "not sure" },
+						correctAnswer: "a",
+					},
+					{
+						query: "?",
+						options: { a: "yes", b: "no", c: "maybe", d: "not sure" },
+						correctAnswer: "a",
+					},
+					{
+						query: "Are you a girl?",
+						options: { a: "yes", b: "no", c: "maybe", d: "not sure" },
+						correctAnswer: "c",
+					},
+				],
+			};
+		},
+
+		computed: {
+			currentQuestion() {
+				return this.questions[this.index];
+			},
+		},
+
+		methods: {
+			nextQuestion() {
+				this.index = this.index === this.questions.length - 1 ? 0 : this.index + 1;
+			},
+			prevQuestion() {
+				this.index = this.index === 0 ? this.questions.length - 1 : this.index - 1;
+			},
+			score() {
+				if(options === correctAnswer)
+					score += 1
+			}
+		}
+	};
 </script>
 
 <style>
-.quiz {
-  display: flex;
-  margin-top: 30px;
-  width: 100vw;
-}
-
-.quiz__left {
-  border-right: 2px black solid;
-  margin: 20px 100px;
-  display: flex;
-  width: 50%;
-}
-
-.quiz__title {
-  font-size: 2em;
-  font-weight: bold;
-}
-
-.quiz__start {
-  background-color: blanchedalmond;
-}
-
-.quiz__que {
-  font-size: 1em;
-  margin-top: 20px;
-  color: black;
-}
-
-.quiz__right {
-  width: 50%;
+	.quiz {
+ 		display: flex;
+  		margin-top: 20px;
 	}
 
-	/* .quiz__options {
-	margin: 150px 50px 0px 200px;
-	} */
+	.quiz__questions {
+  		width: 60%;
+  		padding: 20px;
+  		display: flex;
+		padding-left: 100px;
+	}
+
+	.quiz__question__title {
+		font-size: 3em;
+		font-weight: bold;
+	}
+
+	.quiz__question__query {
+		font-size: 1.3em;
+		margin-top: 20px;
+	}
+
+	.quiz__options {
+		display: grid;
+		height: 40vh;
+		margin: 180px 0px 0px 0px;
+		grid-gap: 40px;
+		width: 15vw;
+
+	}
+
+	.quiz__options-option {
+		background-color: pink;
+	}
+
+	.quiz__options-option:hover {
+		background-color: purple;
+	}
+
+	.quiz__options-option:focus {
+		background-color: white;
+	}
+
+	.quiz__options__buttons {
+		display: flex;
+		justify-content: space-between;
+	}
 
 	.quiz__score {
-		/* margin: 20px 0px 20px 50px; */
-		font-size: 2em;
+		width: 40%;
+		border-left: 2px solid black;
+		height: 85vh;
+		padding: 20px;
+		padding-left: 40px;
+	}
+
+	.quiz__score__title {
+		font-size: 3em;
 		font-weight: bold;
+	}
+
+	.quiz__score__points {
+		font-size: 1.3em;
+		margin-top: 20px;
 	}
 </style>
