@@ -2,7 +2,10 @@
   <section class="component-container">
     <div class="slideshow">
       <button @click="previousImage" class="slideshow__button--left">
-        &lt;
+        <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.01808 24.006L40.0181 24.0301" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22.0286 10.0165L8.01809 24.006L22.0075 38.0165" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </button>
       <figure>
         <img
@@ -11,7 +14,11 @@
           :alt="currentSlide.title"
         />
       </figure>
-      <button @click="nextImage" class="slideshow__button--right">&gt;</button>
+      <button @click="nextImage" class="slideshow__button--right"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M40.9997 25.094L9.00024 24.9059" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M26.9176 39.0115L40.9997 25.094L27.0822 11.012" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
     </div>
 
     <figcaption class="caption">

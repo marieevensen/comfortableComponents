@@ -12,49 +12,49 @@
       <input
         class="contact-form__input"
         type="name"
-        placeholder="Name:"
+        placeholder="Name"
         v-model="form.name"
       />
       <input
         class="contact-form__input"
         type="email"
-        placeholder="E-mail:"
+        placeholder="E-mail"
         v-model="form.email"
       />
       <input
         class="contact-form__input"
         type="dateOfBirth"
-        placeholder="Date of birth (dd/mm/yy):"
+        placeholder="Date of birth (dd/mm/yy)"
         v-model="form.dateOfBirth"
       />
       <input
         class="contact-form__input"
         type="country"
-        placeholder="Country:"
+        placeholder="Country"
         v-model="form.country"
       />
       <input
         class="contact-form__input"
         type="city"
-        placeholder="City:"
+        placeholder="City"
         v-model="form.city"
       />
       <input
         class="contact-form__input"
         type="zipCode"
-        placeholder="Zip Code:"
+        placeholder="Zip Code"
         v-model="form.zipCode"
       />
       <input
         class="contact-form__input"
         type="street"
-        placeholder="Street:"
+        placeholder="Street"
         v-model="form.street"
       />
       <input
         class="contact-form__input"
         type="houseNumber"
-        placeholder="House Number:"
+        placeholder="House Number"
         v-model="form.houseNumber"
       />
     </section>
