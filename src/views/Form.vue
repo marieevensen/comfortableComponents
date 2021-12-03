@@ -94,6 +94,7 @@ export default {
   methods: {
     submit_form() {
       alert(`Welcome to our newsletter, ${this.form.name}!`);
+
     },
   },
 };
@@ -110,7 +111,6 @@ main {
   width: 60%;
   display: flex;
   flex-flow: column nowrap;
-  /* border-right: solid black 2px; */
   padding: 20px;
 }
 
