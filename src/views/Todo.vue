@@ -1,22 +1,21 @@
 <template>
-  <div class="todo">
-    <div class="todo__title">To do today</div>
-    <div class="todo__text">
-      <input class="todo__text-write" type="text" placeholder="Add your task here" v-model="task"/>
-      <button class="todo__text-submit" @click="addTask">ss</button><br />
-      <div class="todo__text-task" v-for="task in pendingTasks" :value="task">
-        <button class="todo__text--btn" @click="deleteTask(index)"><img src="assets/trash.png " alt=""></button>
-        {{ task.text }}
-        <input class="todo__text-box" @click="checkTask" type="checkbox"/>
-      </div>
-    </div>
-    <div class="todo__finished">
-      Finished Tasks:
-      <div class="todo__finished-task" v-for="task in doneTasks" :value="task">
-        {{ task.checked }}
-      </div>
-    </div>
-  </div>
+	<div class="todo">
+    	<div class="todo__title">To do today</div>
+    		<div class="todo__text">
+      			<input class="todo__text-write" type="text" placeholder="Add your task here" v-model="task"/>
+      			<button class="todo__text-submit" @click="addTask">ss</button><br />
+      			<div class="todo__text-task" v-for="task in pendingTasks" :value="task">
+        			{{ task.text }}
+        			<button class="todo__text--done" @click="checkTask" aria-label="Done">O</button>
+      			</div>
+    		</div>
+    	<div class="todo__finished">
+			Finished Tasks:
+			<div class="todo__finished-task" v-for="task in doneTasks" aria-label="Done" :value="task">
+				{{ task.checked }}
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -100,8 +99,8 @@ export default {
     font-size: 0.8em;
   }
 
-  .todo__text--btn img {
-    width: 30px;
+  .todo__text--done {
+    background-color: burlywood;
   }
 
   .todo__text-box:focus {
