@@ -64,18 +64,18 @@
 				score: 0,
 				questions: [
 					{
-						query: "Are you a boy?",
-						options: { a: "yes", b: "no", c: "maybe", d: "not sure" },
+						query: "What is the capital of Madagaskar?",
+						options: { a: "Mugadishu", b: "Marrakesh", c: "Dodoma", d: "Antananarivo" },
+						correctAnswer: "d",
+					},
+					{
+						query: "What is the capital of Norway?",
+						options: { a: "Oslo", b: "Skien", c: "Tomter", d: "Tøyen" },
 						correctAnswer: "a",
 					},
 					{
-						query: "?",
-						options: { a: "yes", b: "no", c: "maybe", d: "not sure" },
-						correctAnswer: "a",
-					},
-					{
-						query: "Are you a girl?",
-						options: { a: "yes", b: "no", c: "maybe", d: "not sure" },
+						query: "What is the capital of Greenland?",
+						options: { a: "Stockholm", b: "Berlin", c: "Nuuk", d: "Virenze" },
 						correctAnswer: "c",
 					},
 				],
@@ -116,6 +116,10 @@
 		padding-left: 100px;
 	}
 
+	.quiz__question {
+		width: 30vw;
+	}
+
 	.quiz__question__title {
 		font-size: 3em;
 		font-weight: bold;
@@ -128,23 +132,24 @@
 
 	.quiz__options {
 		display: grid;
-		height: 40vh;
-		margin: 180px 0px 0px 0px;
-		grid-gap: 40px;
+		height: 50vh;
+		margin: 200px 0px 0px 0px;
+		grid-gap: 30px;
 		width: 15vw;
-
 	}
 
 	.quiz__options-option {
-		background-color: pink;
+		background-color: beige;
+		border: 1px solid beige;
 	}
 
 	.quiz__options-option:hover {
-		background-color: purple;
+		border: black 1px solid;
 	}
 
 	.quiz__options-option:focus {
-		background-color: white;
+		background-color: black;
+		color: white;
 	}
 
 	.quiz__options__buttons {
