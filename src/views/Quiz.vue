@@ -9,31 +9,19 @@
 			</div>
 
 			<div class="quiz__options">
-				<button class="quiz__options-option">
-					{{ currentQuestion.options.a }}
-				</button>
-				
-				<button class="quiz__options-option">
-					{{ currentQuestion.options.b }}
-				</button>
-
-				<button class="quiz__options-option">
-					{{ currentQuestion.options.c }}
-				</button>
-
-				<button class="quiz__options-option">
-					{{ currentQuestion.options.d }}
+				<button class="quiz__options-option" v-for="option in currentQuestion.options" @click="optionClicked(option)">
+					{{ option }}
 				</button>
 				
 				<div class="quiz__options__buttons">
-					<button @click="prevQuestion()">
+					<button @click="prevQuestion">
 						<svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M8.01808 24.006L40.0181 24.0301" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 							<path d="M22.0286 10.0165L8.01809 24.006L22.0075 38.0165" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 						</svg>
 					</button>
 					
-					<button @click="nextQuestion();score();">
+					<button @click="nextQuestion">
 						<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M40.9997 25.094L9.00024 24.9059" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 							<path d="M26.9176 39.0115L40.9997 25.094L27.0822 11.012" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -62,6 +50,7 @@
 			return {
 				index: 0,
 				score: 0,
+				lastOption: null,
 				questions: [
 					{
 						query: "What is the capital of Madagaskar?",
@@ -86,18 +75,36 @@
 			currentQuestion() {
 				return this.questions[this.index];
 			},
+
+			correctAnswer() {
+				return this.currentQuestion.options[this.currentQuestion.correctAnswer]
+			}
 		},
 
 		methods: {
+			optionClicked(option) {
+				this.lastOption = option;
+			},
+
 			nextQuestion() {
+				this.updateScore();
+				this.increaseIndex();
+			},
+
+			increaseIndex() {
 				this.index = this.index === this.questions.length - 1 ? 0 : this.index + 1;
 			},
+
 			prevQuestion() {
 				this.index = this.index === 0 ? this.questions.length - 1 : this.index - 1;
 			},
-			score() {
-				if(options === correctAnswer)
-					score += 1
+
+			updateScore() {				
+				if (this.lastOption === this.correctAnswer) {
+					this.score += 1;
+				} else {
+					this.score = 0;
+				}
 			}
 		}
 	};
