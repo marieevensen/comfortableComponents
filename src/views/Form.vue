@@ -3,10 +3,7 @@
     <section class="contact-form">
       <h1>Sign up for the Weekly Newsletter</h1>
       <div class="contact-form__text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-        officia, commodi eveniet eos laborum, consectetur aliquam hic odio sunt
-        quibusdam quos itaque recusandae dolorum asperiores dolores qui ipsum,
-        atque beatae?
+       
       </div>
 
       <input
@@ -106,14 +103,14 @@ export default {
 main {
   display: flex;
   margin-bottom: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .contact-form {
   width: 60%;
   display: flex;
   flex-flow: column nowrap;
-  border-right: solid black 2px;
+  /* border-right: solid black 2px; */
   padding: 20px;
 }
 
@@ -138,6 +135,8 @@ main {
 .contact-info {
   width: 40%;
   padding: 20px;
+  height: 85vh;
+  border-left: 2px solid black;
 }
 
 .contact-info__output {

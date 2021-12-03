@@ -93,11 +93,11 @@ export default {
 }
 
 .caption {
-  margin-top: 10px;
+  margin-top: 20px;
   padding: 20px;
   border-left: solid 2px black;
   width: 40%;
-  height: 80vh;
+  height: 85vh;
 }
 
 .caption__description {
