@@ -71,7 +71,7 @@
     }
 
     table button:hover {
-        color: beige;
+        color: rgba(0, 0, 0, 0.377);
     }
 
     table tbody {
