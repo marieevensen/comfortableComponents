@@ -3,19 +3,14 @@
     <div class="quiz__left">
       <div class="quiz__questions">
         <div class="quiz__title">Quiz</div>
-        <button class="quiz__start" @click="startQuiz">Start</button><br />
-        <div
-          class="quiz__que"
-          v-for="(question, index) in questions"
-          :value="question"
-        >
-          {{ questions.hei }}
+        <div class="quiz__que" v-for="question in questions" :value="question">
+          {{ question.hei }}
         </div>
       </div>
       <div class="quiz__right">
         <div class="quiz__options">
           <label for="a" class="quiz__options-option">
-            <input type="radio" class="hidden" />
+            <input type="radio" class="hidden" v-for="answer in questions"/>
             Option 1 </label
           ><br />
           <label for="a" class="quiz__options-option">
@@ -57,13 +52,6 @@ export default {
       ],
     };
   },
-  methods: {
-    startQuiz() {
-      this.questions.push({
-        hei: this.question,
-      });
-    },
-  },
 };
 </script>
 
@@ -98,15 +86,15 @@ export default {
 
 .quiz__right {
   width: 50%;
-}
+	}
 
-/* .quiz__options {
-  margin: 150px 50px 0px 200px;
-} */
+	/* .quiz__options {
+	margin: 150px 50px 0px 200px;
+	} */
 
-.quiz__score {
-  /* margin: 20px 0px 20px 50px; */
-  font-size: 2em;
-  font-weight: bold;
-}
+	.quiz__score {
+		/* margin: 20px 0px 20px 50px; */
+		font-size: 2em;
+		font-weight: bold;
+	}
 </style>
