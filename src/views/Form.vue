@@ -1,10 +1,8 @@
 <template>
   <main>
     <section class="contact-form">
-      <h1>Sign up for the Weekly Newsletter</h1>
-      <div class="contact-form__text">
-       
-      </div>
+      <h1 class="contact-form__title">Sign up for the Weekly Newsletter</h1>
+      
 
       <input
         class="contact-form__input"
@@ -59,12 +57,12 @@
     <section class="contact-info">
       <div class="contact-info__output">{{ form.name }}</div>
       <div class="contact-info__output">{{ form.email }}</div>
-      <!-- må gjøres om til funksjoner: -->
+
       <div class="contact-info__output">Born in {{ form.dateOfBirth }}</div>
       <div class="contact-info__output">
         Lives in {{ form.street }} {{ form.houseNumber }}
       </div>
-      <!-- ---------------------------- -->
+
       <div class="contact-info__output">{{ form.zipCode }} {{ form.city }}</div>
       <div class="contact-info__output">{{ form.country }}</div>
       <button class="contact-info__button" @click="submit_form">Submit</button>
@@ -105,6 +103,10 @@ main {
   display: flex;
   margin-bottom: 10px;
   margin-top: 20px;
+}
+
+.contact-form__title {
+	margin-bottom: 20px;
 }
 
 .contact-form {
