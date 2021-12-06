@@ -8,10 +8,13 @@
     <main>
       <section class="contact-form">
         <h1>Sign up for the Weekly Newsletter</h1>
+<<<<<<< HEAD
         <div class="contact-form__text">
         
         </div>
 >>>>>>> 091de548253d3095e92bd8fb62fea76fa2b699c0
+=======
+>>>>>>> d28eb01c269e1600e52dfaee23a6bc6859ec4464
 
         <input
           class="contact-form__input"

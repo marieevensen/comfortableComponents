@@ -6,9 +6,6 @@
     <RouterLink class="header__link" :to="{ name: 'quiz' }">Quiz</RouterLink>
     <RouterLink class="header__link" :to="{ name: 'form' }">Form</RouterLink>
     <RouterLink class="header__link" :to="{ name: 'slideshow' }">Slideshow</RouterLink>
-    
-    <!-- <RouterLink :to="{ name: 'Form' }">Form</RouterLink>
-        <RouterLink :to="{ name: 'Slideshow' }">Slideshow</RouterLink> -->
   </header>
 </template>
 

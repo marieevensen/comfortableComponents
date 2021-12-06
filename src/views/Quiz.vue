@@ -95,9 +95,9 @@
 				this.index = this.index === this.questions.length - 1 ? 0 : this.index + 1;
 			},
 
-			prevQuestion() {
-				this.index = this.index === 0 ? this.questions.length - 1 : this.index - 1;
-			},
+			// prevQuestion() {
+			// 	this.index = this.index === 0 ? this.questions.length - 1 : this.index - 1;
+			// },
 
 			updateScore() {				
 				if (this.lastOption === this.correctAnswer) {
