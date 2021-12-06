@@ -100,6 +100,7 @@
 			startOver() {
 				this.score = 0;
 				// her skal spørsmålene starte på nytt
+				this.index = 0;
 			}
 		}
 	};
