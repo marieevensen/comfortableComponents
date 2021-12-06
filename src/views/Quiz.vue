@@ -89,11 +89,9 @@
 				this.index = this.index === this.questions.length - 1 ? 0 : this.index + 1;
 			},
 
-			updateScore() {		
-				if (this.lastOption === this.correctAnswer) {
+			updateScore() {	
+				if (this.score < 3 && this.lastOption === this.correctAnswer) {
 					this.score += 1;
-				} else if (this.index === this.questions.length) {
-					this.startOver;
 				} else {
 					this.score += 0;
 				}
@@ -101,6 +99,7 @@
 			
 			startOver() {
 				this.score = 0;
+				// her skal spørsmålene starte på nytt
 			}
 		}
 	};
@@ -157,7 +156,7 @@
 
 	.quiz__options__buttons {
 		display: flex;
-		justify-content: space-between;
+		justify-content: right;
 	}
 
 	.quiz__score {
@@ -181,6 +180,6 @@
 
 	.quiz__score__start-over:hover {
 		transform: rotate(360deg);
-		transition-duration: 1.5s;
+		transition-duration: 1.3s;
 	}
 </style>
