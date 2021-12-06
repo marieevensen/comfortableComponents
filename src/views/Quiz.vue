@@ -14,10 +14,15 @@
 				</button>
 				
 				<div class="quiz__options__buttons">
-					<button @click="nextQuestion">
+					<button @click="nextQuestion" v-if="index < 3">
 						<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M40.9997 25.094L9.00024 24.9059" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 							<path d="M26.9176 39.0115L40.9997 25.094L27.0822 11.012" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</button>
+					<button class="quiz__options__start-over" @click="startOver" v-else>
+						<svg width="80" height="80" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M34.5 0C15.4462 0 0 15.4462 0 34.5C0 53.5538 15.4462 69 34.5 69C47.2886 69 58.4424 62.0365 64.4012 51.6995L52.2554 44.7127C48.715 50.8533 42.0973 54.997 34.5 54.997C23.1798 54.997 14.003 45.8202 14.003 34.5C14.003 23.1798 23.1798 14.003 34.5 14.003C39.3523 14.003 43.7996 15.7004 47.3069 18.5218L38.2482 24.9654L69 35.2201V3.08275L58.9852 10.2085C52.7346 3.90724 44.0768 0 34.5 0Z" fill="black"/>
 						</svg>
 					</button>
 				</div>
@@ -29,11 +34,6 @@
 			<div class="quiz__score__points">
 				Your score is {{ score }}/3
 			</div>
-			<button class="quiz__score__start-over" @click="startOver">
-				<svg width="40" height="40" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M34.5 0C15.4462 0 0 15.4462 0 34.5C0 53.5538 15.4462 69 34.5 69C47.2886 69 58.4424 62.0365 64.4012 51.6995L52.2554 44.7127C48.715 50.8533 42.0973 54.997 34.5 54.997C23.1798 54.997 14.003 45.8202 14.003 34.5C14.003 23.1798 23.1798 14.003 34.5 14.003C39.3523 14.003 43.7996 15.7004 47.3069 18.5218L38.2482 24.9654L69 35.2201V3.08275L58.9852 10.2085C52.7346 3.90724 44.0768 0 34.5 0Z" fill="black"/>
-				</svg>
-			</button>
 		</section>
     </div>
 </template>
@@ -61,6 +61,9 @@
 						options: { a: "Stockholm", b: "Berlin", c: "Nuuk", d: "Virenze" },
 						correctAnswer: "c",
 					},
+					{
+						query: "Do you want to start over?"
+					}
 				],
 			};
 		},
@@ -99,7 +102,6 @@
 			
 			startOver() {
 				this.score = 0;
-				// her skal spørsmålene starte på nytt
 				this.index = 0;
 			}
 		}
@@ -160,6 +162,16 @@
 		justify-content: right;
 	}
 
+	.quiz__options__start-over {
+		height: fit-content;
+		margin-top: 150px;
+	}
+
+	.quiz__options__start-over:hover {
+		transform: rotate(360deg);
+		transition-duration: 1.3s;
+	}
+
 	.quiz__score {
 		width: 40%;
 		border-left: 2px solid black;
@@ -177,10 +189,5 @@
 		font-size: 1.3em;
 		margin-top: 20px;
 		margin-bottom: 20px;
-	}
-
-	.quiz__score__start-over:hover {
-		transform: rotate(360deg);
-		transition-duration: 1.3s;
 	}
 </style>
