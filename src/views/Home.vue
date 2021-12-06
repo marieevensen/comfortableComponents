@@ -65,6 +65,7 @@ export default {
         width: 30vw;
         height: 35vh;
         margin: 10px;
+        overflow: scroll;
     }
 
     .main__grid-box--black {

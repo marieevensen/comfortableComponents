@@ -88,6 +88,7 @@
 
 			nextQuestion() {
 				this.updateScore();
+				
 				this.increaseIndex();
 			},
 
