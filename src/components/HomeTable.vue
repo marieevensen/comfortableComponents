@@ -1,17 +1,17 @@
 <template>
-        <table>
-            <thead>
-                <tr>
-                    <td><button @click="sortBy('fname')">First Name</button></td>
+        <table class="home-table">
+            <thead class="home-thead">
+                <tr class="home-tr">
+                    <td class="home-td"><button @click="sortBy('fname')">First Name</button></td>
                     <td><button @click="sortBy('lname')">Last Name</button></td>
                     <td><button @click="sortBy('gender')">Gender</button></td>
                     <td><button @click="sortBy('job')">Job</button></td>
                 </tr>
             </thead>
 
-            <tbody>
-                <tr v-for="row in alphabeticalSort">
-                    <td v-for="value in row">{{ value }}</td>
+            <tbody class="home-tbody">
+                <tr class="home-tr" v-for="row in alphabeticalSort">
+                    <td class="home-td" v-for="value in row">{{ value }}</td>
                 </tr>
             </tbody>
         </table>
@@ -55,32 +55,26 @@
 </script>
 
 <style>
-    table {
-        margin-top: 2em;
+    .home-table {
         border-collapse: collapse;
-        width: 70vw;
-        margin-left: auto;
-        margin-right: auto;
+        width: 30vw;
+        margin-top: 0;
     }
 
-    table thead {
+    .home-thead {
         font-weight: bold;
-        font-size: 0.8em;
+        font-size: 0.4em;
     }
 
-    table button:hover {
+    .home-table button:hover {
         color: rgba(0, 0, 0, 0.377);
     }
 
-    table tbody {
-        font-size: 0.7em;
+    .home-tbody {
+        font-size: 0.4em;
     }
 
-    table tr {
-        border: 1.5px solid black;
-    }
-
-    table td {
-        padding: 0.5em 1em 0.5em 1em;
+    .home-td {
+        padding: 0.59em 1em 0.59em 1em;
     }
 </style>

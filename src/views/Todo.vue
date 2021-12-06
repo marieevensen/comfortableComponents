@@ -105,7 +105,6 @@ export default {
 	.todo__tasks {
 		margin-top: 10vh;
 		height: fit-content;
-
 	}
 
 	.todo__tasks__pending {

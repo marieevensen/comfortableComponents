@@ -2,9 +2,6 @@
     <main>
       <section class="contact-form">
         <h1>Sign up for the Weekly Newsletter</h1>
-        <div class="contact-form__text">
-        
-        </div>
 
         <input
           class="contact-form__input"
