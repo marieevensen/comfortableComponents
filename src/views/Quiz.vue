@@ -14,13 +14,6 @@
 				</button>
 				
 				<div class="quiz__options__buttons">
-					<button @click="prevQuestion">
-						<svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M8.01808 24.006L40.0181 24.0301" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-							<path d="M22.0286 10.0165L8.01809 24.006L22.0075 38.0165" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
-					</button>
-					
 					<button @click="nextQuestion">
 						<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M40.9997 25.094L9.00024 24.9059" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -36,10 +29,6 @@
 			<div class="quiz__score__points">
 				Your score is {{ score }}/3
 			</div>
-      			<!--HER SKAL SCOREN STÅ^
-                	<div class="todo__finished-task" v-for="(task, index) in tasks" :value="task">
-                	Your score is{{ task.finished }}/10
-            	</div> -->
 		</section>
     </div>
 </template>
@@ -88,7 +77,6 @@
 
 			nextQuestion() {
 				this.updateScore();
-				
 				this.increaseIndex();
 			},
 
@@ -96,17 +84,13 @@
 				this.index = this.index === this.questions.length - 1 ? 0 : this.index + 1;
 			},
 
-			// prevQuestion() {
-			// 	this.index = this.index === 0 ? this.questions.length - 1 : this.index - 1;
-			// },
-
-			updateScore() {				
+			updateScore() {		
 				if (this.lastOption === this.correctAnswer) {
 					this.score += 1;
 				} else {
-					this.score = 0;
+					this.score += 0;
 				}
-			}
+			}	
 		}
 	};
 </script>
