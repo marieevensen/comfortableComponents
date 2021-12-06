@@ -1,21 +1,7 @@
 <template>
-<<<<<<< HEAD
   <main>
     <section class="contact-form">
       <h1 class="contact-form__title">Sign up for the Weekly Newsletter</h1>
-      
-=======
-    <main>
-      <section class="contact-form">
-        <h1>Sign up for the Weekly Newsletter</h1>
-<<<<<<< HEAD
-        <div class="contact-form__text">
-        
-        </div>
->>>>>>> 091de548253d3095e92bd8fb62fea76fa2b699c0
-=======
->>>>>>> d28eb01c269e1600e52dfaee23a6bc6859ec4464
-
         <input
           class="contact-form__input"
           type="name"
@@ -66,7 +52,6 @@
         />
       </section>
 
-<<<<<<< HEAD
     <section class="contact-info">
       <div class="contact-info__output">{{ form.name }}</div>
       <div class="contact-info__output">{{ form.email }}</div>
@@ -81,22 +66,6 @@
       <button class="contact-info__button" @click="submit_form">Submit</button>
     </section>
   </main>
-=======
-      <section class="contact-info">
-        <div class="contact-info__output">{{ form.name }}</div>
-        <div class="contact-info__output">{{ form.email }}</div>
-        <!-- må gjøres om til funksjoner: -->
-        <div class="contact-info__output">Born in {{ form.dateOfBirth }}</div>
-        <div class="contact-info__output">
-          Lives in {{ form.street }} {{ form.houseNumber }}
-        </div>
-        <!-- ---------------------------- -->
-        <div class="contact-info__output">{{ form.zipCode }} {{ form.city }}</div>
-        <div class="contact-info__output">{{ form.country }}</div>
-        <button class="contact-info__button" @click="submit_form">Submit</button>
-      </section>
-    </main>
->>>>>>> 091de548253d3095e92bd8fb62fea76fa2b699c0
 </template>
 
 <script>
