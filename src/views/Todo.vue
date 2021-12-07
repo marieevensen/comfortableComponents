@@ -4,7 +4,7 @@
 			<div class="todo__title">
 				To do today:
 			</div>
-			<input class="todo__input-field" type="text" placeholder="Add your task here" v-model="task"/>
+			<input class="todo__input-field" type="text" placeholder="Add your task here" v-model="task" v-on:keyup.enter="addTask"/>
 			<button class="todo__submit-button" @click="addTask">
 				Add
 			</button>
