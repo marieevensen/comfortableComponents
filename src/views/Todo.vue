@@ -16,18 +16,14 @@
 					<div class="todo__task-text">
 						{{ task.text }}
 					</div> 
-					<button class="todo__check-button" @click="checkTask(index)">
-						<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M11.4999 21.9166C17.2529 21.9166 21.9166 17.2529 21.9166 11.5C21.9166 5.74701 17.2529 1.08331 11.4999 1.08331C5.74695 1.08331 1.08325 5.74701 1.08325 11.5C1.08325 17.2529 5.74695 21.9166 11.4999 21.9166Z" stroke="black" stroke-width="2.08333"/>
-						</svg>
-					</button>
+					<button class="todo__check-button" @click="checkTask(index)"></button>
 				</div>
 			</div>
 		</div>
 		<div class="finished-tasks">
 			Finished Tasks:
 			<div class="finished-tasks__done" v-for="task in doneTasks">
-				{{ task.checked }}
+				{{ task.text }}
 			</div>
 		</div>
 	</main>
@@ -62,12 +58,12 @@ export default {
 		deleteTask(index) {
 			this.tasks.splice(index, 1);
 		},
-		checkTask(index) {
-			this.tasks.push({
-				checked: this.task,
-				done: true
-			});
-		}
+		// checkTask(index) {
+		// 	this.tasks.push({
+		// 		checked: this.task,
+		// 		done: true
+		// 	});
+		// }
 	}
 };
 </script>
@@ -100,6 +96,15 @@ export default {
 
 	.todo__check-button {
 		font-weight: bold;
+		border: 1px solid black;
+		background-color: white;
+		width: 22px;
+		height: 22px;
+		border-radius: 30px;
+	}
+
+	.todo__check-button:focus {
+		background-color: black;
 	}
 
 	.todo__tasks {
