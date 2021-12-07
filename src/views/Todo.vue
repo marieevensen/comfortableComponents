@@ -15,8 +15,11 @@
 					</button>
 					<div class="todo__task-text">
 						{{ task.text }}
-					</div> 
-					<button class="todo__check-button"></button>
+					</div>
+					<label class="todo__checkbox">
+						<input type="checkbox">
+						<span class="checkbox"></span>
+					</label>
 				</div>
 			</div>
 		</div>
@@ -72,16 +75,20 @@ export default {
 		font-weight: bold;
 	}
 
-	.todo__check-button {
+	/* .todo__checkbox {
 		font-weight: bold;
 		border: 1px solid black;
 		background-color: white;
 		width: 22px;
 		height: 22px;
-		border-radius: 30px;
+		border-radius: 50%;
+	} */
+
+	.todo__checkbox input:checked ~ .checkbox {
+		background-color: black;
 	}
 
-	.todo__check-button:focus {
+	input:checked ~ .todo__checkbox {
 		background-color: black;
 	}
 
