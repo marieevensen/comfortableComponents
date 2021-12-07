@@ -56,7 +56,7 @@
 
 <style>
     table {
-        margin-top: 2em;
+        margin-top: 50px;
         border-collapse: collapse;
         width: 70vw;
         margin-left: auto;
@@ -65,7 +65,7 @@
 
     table thead {
         font-weight: bold;
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
 
     table button:hover {
@@ -73,7 +73,7 @@
     }
 
     table tbody {
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
 
     table tr {

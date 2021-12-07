@@ -1,29 +1,26 @@
 <template>
-	<main>
-		<div class="todo">
+	<div class="todo">
+		<div class="todo__add">
 			<div class="todo__title">
 				To do today:
 			</div>
 			<input class="todo__input-field" type="text" placeholder="Add your task here" v-model="task" v-on:keyup.enter="addTask"/>
 			<button class="todo__submit-button" @click="addTask">
 				Add
-			</button>
-			<div class="todo__tasks">
-				<div class="todo__tasks__pending" v-for="(task, index) in tasks">
-					<button class="todo__delete-button" @click="deleteTask(index)">
-						X
-					</button>
-					<div class="todo__task-text">
-						{{ task.text }}
-					</div>
-					<label class="todo__checkbox">
-						<input type="checkbox">
-						<span class="checkbox"></span>
-					</label>
+			</button>	
+		</div>
+		<div class="todo__tasks">
+			<div class="todo__tasks__list" v-for="(task, index) in tasks">
+				<button class="todo__delete-button" @click="deleteTask(index)">
+					X
+				</button>
+				<div class="todo__task-text">
+					{{ task.text }}
 				</div>
+				<input class="todo__checkbox" type="checkbox">
 			</div>
 		</div>
-	</main>
+	</div>
 </template>
 
 <script>
@@ -50,15 +47,15 @@ export default {
 </script>
 
 <style>
-	main {
+	.todo {
 		width: 100vw;
-		display: flex;
+		font-size: 1.2em;
 	}
 
-	.todo {
+	.todo__add {
 		display: flex;
-		width: 60%;
-		padding: 10px;
+		margin-top: 60px;
+		justify-content: center;
 	}
 
 	.todo__input-field {
@@ -69,51 +66,36 @@ export default {
 	.todo__submit-button {
 		height: fit-content;
 		margin-left: 10px;
+		font-weight: bold;
+	}
+
+	.todo__tasks {
+		height: fit-content;
+		margin-top: 20px;
+		margin-left: 620px;
 	}
 
 	.todo__delete-button {
 		font-weight: bold;
 	}
 
-	/* .todo__checkbox {
+	.todo__checkbox {
 		font-weight: bold;
 		border: 1px solid black;
 		background-color: white;
 		width: 22px;
 		height: 22px;
 		border-radius: 50%;
-	} */
-
-	.todo__checkbox input:checked ~ .checkbox {
-		background-color: black;
 	}
 
-	input:checked ~ .todo__checkbox {
-		background-color: black;
-	}
-
-	.todo__tasks {
-		margin-top: 10vh;
-		height: fit-content;
-	}
-
-	.todo__tasks__pending {
+	.todo__tasks__list {
 		display: flex;
-		margin-top: 20px;
+		margin-top: 10px;
 	}
 
 	.todo__task-text {
 		display: block;
-		margin: 0px 10px 0px 10px;
+		margin: 0px 20px 0px 20px;
 	}
-	
-	.finished-tasks {
-		width: 40%;
-		height: 85vh;
-		padding: 10px;
-		border-left: solid 2px black;
-	}
-
-
 </style>
 
