@@ -9,21 +9,15 @@
 				Add
 			</button>
 			<div class="todo__tasks">
-				<div class="todo__tasks__pending" v-for="task in pendingTasks">
+				<div class="todo__tasks__pending" v-for="(task, index) in tasks">
 					<button class="todo__delete-button" @click="deleteTask(index)">
 						X
 					</button>
 					<div class="todo__task-text">
 						{{ task.text }}
 					</div> 
-					<button class="todo__check-button" @click="checkTask(index)"></button>
+					<button class="todo__check-button"></button>
 				</div>
-			</div>
-		</div>
-		<div class="finished-tasks">
-			Finished Tasks:
-			<div class="finished-tasks__done" v-for="task in doneTasks">
-				{{ task.text }}
 			</div>
 		</div>
 	</main>
@@ -36,16 +30,6 @@ export default {
 			tasks: []
 			}
     	},
-
-	computed: {
-		pendingTasks() {
-			return this.tasks.filter(task => task.done === false)
-		},
-		doneTasks() {
-			return this.tasks.filter(task => task.done === true)
-		}
-	},
-
 	methods: {
 		addTask() {
 			if (this.task.length === 0) return;
@@ -57,13 +41,7 @@ export default {
 		},
 		deleteTask(index) {
 			this.tasks.splice(index, 1);
-		},
-		// checkTask(index) {
-		// 	this.tasks.push({
-		// 		checked: this.task,
-		// 		done: true
-		// 	});
-		// }
+		}
 	}
 };
 </script>
