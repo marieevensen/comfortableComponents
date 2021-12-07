@@ -16,7 +16,7 @@
 .header {
   border: 2px black solid;
   padding: 1em 0em 0.4em 0em;
-  width: 100vw;
+  width: 100%;
   text-align: center;
 }
 
