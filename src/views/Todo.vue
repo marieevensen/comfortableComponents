@@ -14,10 +14,11 @@
 				<button class="todo__delete-button" @click="deleteTask(index)">
 					X
 				</button>
-				<div class="todo__task-text">
-					{{ task.text }}
+				
+				<div class="input-checkbox">
+  					<input class="input-checkbox__input" type="checkbox" id="task">
+  					<label class="input-checkbox__label" for="task">{{ task.text }}</label>
 				</div>
-				<input class="todo__checkbox" type="checkbox">
 			</div>
 		</div>
 	</div>
@@ -79,13 +80,33 @@ export default {
 		font-weight: bold;
 	}
 
-	.todo__checkbox {
-		font-weight: bold;
+	.input-checkbox__input {
+		display: none;
 		border: 1px solid black;
-		background-color: white;
-		width: 22px;
-		height: 22px;
-		border-radius: 50%;
+		
+	}
+
+
+	.input-checkbox__label::before {
+		content: 'xx';
+		color: grey;
+		display: 'inline-block';
+		width: 20px;
+		height: 20px;
+		background: grey;
+		border: 1px solid black;
+		border-radius: 100%;
+
+	
+
+	}
+
+
+	.input-checkbox__input:checked + label::before {
+		content: 'xx';
+		color: black;
+		background: black;
+	
 	}
 
 	.todo__tasks__list {
