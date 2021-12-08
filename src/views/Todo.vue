@@ -4,7 +4,9 @@
 			<div class="todo__title">
 				To do today:
 			</div>
+			
 			<input class="todo__input-field" type="text" placeholder="Add your task here" v-model="task" v-on:keyup.enter="addTask"/>
+			
 			<button class="todo__submit-button" @click="addTask">
 				Add
 			</button>	
@@ -25,26 +27,26 @@
 </template>
 
 <script>
-export default {
-	data() {
-    	return {
-			tasks: []
-			}
-    	},
-	methods: {
-		addTask() {
-			if (this.task.length === 0) return;
+	export default {
+		data() {
+			return {
+				tasks: []
+				}
+			},
+		methods: {
+			addTask() {
+				if (this.task.length === 0) return;
 
-			this.tasks.push({
-				text: this.task,
-				done: false
-			});
-		},
-		deleteTask(index) {
-			this.tasks.splice(index, 1);
+				this.tasks.push({
+					text: this.task,
+					done: false
+				});
+			},
+			deleteTask(index) {
+				this.tasks.splice(index, 1);
+			}
 		}
-	}
-};
+	};
 </script>
 
 <style>
