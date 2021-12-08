@@ -44,10 +44,10 @@
 				},
 			};
 		},
-
-	methods: {
-		submit_form() {
-			alert(`Welcome to our newsletter, ${this.form.name}!`);
+		
+		methods: {
+			submit_form() {
+				alert(`Welcome to our newsletter, ${this.form.name}!`);
 			},
 		},
 	};
