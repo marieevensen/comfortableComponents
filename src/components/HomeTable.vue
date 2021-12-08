@@ -29,6 +29,7 @@
                 content: JSON.parse(mockData)
             }
 		},
+        
         computed: {
             alphabeticalSort() {
                 const key = this.sort.key;
@@ -46,6 +47,7 @@
                 return this.content.sort(sortFunction)
             }
         },
+
         methods: {
             sortBy(key) {
                 this.sort.key = key;

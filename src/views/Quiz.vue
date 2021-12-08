@@ -31,6 +31,7 @@
 
 		<section class="quiz__score">
 			<div class="quiz__score__title">Score</div>
+			
 			<div class="quiz__score__points">
 				Your score is {{ score }}/3
 			</div>
@@ -112,6 +113,7 @@
 	.quiz {
  		display: flex;
   		margin-top: 20px;
+		width: 100vw;
 	}
 
 	.quiz__questions {

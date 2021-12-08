@@ -1,4 +1,5 @@
 <template>
+    <main class="main-table">
         <table>
             <thead>
                 <tr>
@@ -15,11 +16,13 @@
                 </tr>
             </tbody>
         </table>
+    </main>
 </template>
 
 <script>
     const mockData = `[{"fname":"Issie","lname":"Phinnis","gender":"Agender","job":"Accountant I"}, {"fname":"Dyann","lname":"Corriea","gender":"Female","job":"Account Executive"}, {"fname":"Nicholle","lname":"Vallack","gender":"Genderqueer","job":"Research Assistant I"}, {"fname":"Drake","lname":"Cunliffe","gender":"Polygender","job":"Systems Administrator III"}, {"fname":"Bessy","lname":"Goodrum","gender":"Bigender","job":"Human Resources Manager"}, {"fname":"Sydelle","lname":"Duesberry","gender":"Bigender","job":"Programmer Analyst III"}, {"fname":"Crichton","lname":"Le Marchant","gender":"Genderfluid","job":"Editor"}, {"fname":"Aymer","lname":"Thorn","gender":"Genderfluid","job":"Speech Pathologist"}, {"fname":"Kelcie","lname":"Mcmanaman","gender":"Agender","job":"VP Marketing"}]`
-	export default {
+	
+    export default {
 		data() {
 			return {
                 sort: {
@@ -29,6 +32,7 @@
                 content: JSON.parse(mockData)
             }
 		},
+
         computed: {
             alphabeticalSort() {
                 const key = this.sort.key;
@@ -46,6 +50,7 @@
                 return this.content.sort(sortFunction)
             }
         },
+        
         methods: {
             sortBy(key) {
                 this.sort.key = key;
@@ -55,12 +60,26 @@
 </script>
 
 <style>
+    .main-table {
+        width: 100vw;
+    }
+
     table {
         margin-top: 50px;
         border-collapse: collapse;
-        width: 70vw;
+        width: 80vw;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    @media  screen and (min-width: 768px) {
+        table {
+            margin-top: 50px;
+            border-collapse: collapse;
+            width: 70vw;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     table thead {

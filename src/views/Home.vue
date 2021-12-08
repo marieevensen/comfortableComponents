@@ -5,20 +5,25 @@
             <div class="main__grid-box">
                 <HomeTodo />
             </div>
+
             <div class="main__grid-box">
                 <HomeTable />
             </div>
+            
             <div class="main__grid-box">
                 <HomeQuiz />
             </div>
         </div>
+
         <div class="main__grid">
             <div class="main__grid-box">
                 <HomeForm />
             </div>
+        
             <div class="main__grid-box">
                 <HomeSlideshow />
             </div>
+        
             <div class="main__grid-box--black">
                 Made by Sigurd og Marie
             </div>
@@ -45,13 +50,12 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style>
     .main {
         display: grid;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        width: 100vw;
         margin-top: 35px;
     }
 
