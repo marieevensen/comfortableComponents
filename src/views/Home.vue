@@ -67,7 +67,7 @@ export default {
         border: 1px black solid;
         justify-content: space-between;
         width: 30vw;
-        height: 35vh;
+        height: 38vh;
         margin: 10px;
         overflow: hidden;
     }
@@ -76,12 +76,12 @@ export default {
         border: 1px black solid;
         justify-content: space-between;
         width: 30vw;
-        height: 35vh;
+        height: 38vh;
         margin: 10px;
         background-color: black;
         color: white;
         text-align: center;
-        padding-top: 100px;
+        padding-top: 110px;
     }
 
 </style>

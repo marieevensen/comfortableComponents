@@ -77,6 +77,6 @@
     }
 
     .home-td {
-        padding: 0.59em 1em 0.59em 1em;
+        padding: 0.7em 1em 0.7em 1em;
     }
 </style>

@@ -8,6 +8,7 @@
 			type="name"
 			placeholder="Name" 
 			v-model="form.name"
+			value required
 			/>
 
 			<input
@@ -22,6 +23,7 @@
 			type="dateOfBirth"
 			placeholder="Date of birth (dd/mm/yy)"
 			v-model="form.dateOfBirth"
+			value required
 			/>
 			
 			<input
@@ -29,6 +31,7 @@
 			type="country"
 			placeholder="Country"
 			v-model="form.country"
+			value required
 			/>
 			
 			<input
@@ -43,6 +46,7 @@
 			type="zipCode"
 			placeholder="Zip Code"
 			v-model="form.zipCode"
+			value required
 			/>
 			
 			<input
@@ -50,6 +54,7 @@
 			type="street"
 			placeholder="Street"
 			v-model="form.street"
+			value required
 			/>
 			
 			<input
@@ -57,7 +62,10 @@
 			type="houseNumber"
 			placeholder="House Number"
 			v-model="form.houseNumber"
+			value required
 			/>
+
+			<button class="home-contact-info__button" @click="submit_form" value="Reset" type="reset">Submit</button>
 		</section>
 	</main>
 </template>
