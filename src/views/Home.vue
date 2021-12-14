@@ -1,30 +1,29 @@
 <template>
-
     <main class="main">
         <div class="main__grid">
-            <div class="main__grid-box">
+            <div class="grid__box">
                 <HomeTodo />
             </div>
 
-            <div class="main__grid-box">
+            <div class="grid__box">
                 <HomeTable />
             </div>
             
-            <div class="main__grid-box">
+            <div class="grid__box">
                 <HomeQuiz />
             </div>
         </div>
 
         <div class="main__grid">
-            <div class="main__grid-box">
+            <div class="grid__box">
                 <HomeForm />
             </div>
         
-            <div class="main__grid-box">
+            <div class="grid__box">
                 <HomeSlideshow />
             </div>
         
-            <div class="main__grid-box--black">
+            <div class="grid__box--black">
                 Made by Sigurd og Marie
             </div>
         </div>
@@ -32,22 +31,21 @@
 </template>
 
 <script>
-import HomeTodo from '../components/HomeTodo.vue';
-import HomeTable from '../components/HomeTable.vue';
-import HomeQuiz from '../components/HomeQuiz.vue';
-import HomeForm from '../components/HomeForm.vue';
-import HomeSlideshow from '../components/HomeSlideshow.vue';
+    import HomeTodo from '../components/HomeTodo.vue';
+    import HomeTable from '../components/HomeTable.vue';
+    import HomeQuiz from '../components/HomeQuiz.vue';
+    import HomeForm from '../components/HomeForm.vue';
+    import HomeSlideshow from '../components/HomeSlideshow.vue';
 
-
-export default {
-    components: {
-        HomeTodo,
-        HomeTable,
-        HomeQuiz,
-        HomeForm,
-        HomeSlideshow
+    export default {
+        components: {
+            HomeTodo,
+            HomeTable,
+            HomeQuiz,
+            HomeForm,
+            HomeSlideshow
+        }
     }
-}
 </script>
 
 <style>
@@ -63,7 +61,7 @@ export default {
         display: flex;
     }
 
-    .main__grid-box {
+    .grid__box {
         border: 1px black solid;
         justify-content: space-between;
         width: 30vw;
@@ -72,7 +70,7 @@ export default {
         overflow: hidden;
     }
 
-    .main__grid-box--black {
+    .grid__box--black {
         border: 1px black solid;
         justify-content: space-between;
         width: 30vw;
@@ -83,5 +81,4 @@ export default {
         text-align: center;
         padding-top: 110px;
     }
-
 </style>

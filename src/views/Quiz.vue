@@ -1,20 +1,20 @@
 <template>
   	<div class="quiz">
 		<section class="quiz__questions">
-			<div class="quiz__question">
-				<div class="quiz__question__title">Quiz</div>
+			<div class="questions__question">
+				Quiz
 
-				<div class="quiz__question__query">
+				<div class="question__query">
 					{{ currentQuestion.query }}
 				</div>
 			</div>
 
 			<div class="quiz__options">
-				<button class="quiz__options-option" v-for="option in currentQuestion.options" @click="optionClicked(option)">
+				<button class="options__option" v-for="option in currentQuestion.options" @click="optionClicked(option)">
 					{{ option }}
 				</button>
 				
-				<div class="quiz__options__buttons">
+				<div class="options__buttons">
 					<button @click="nextQuestion" v-if="index < 3">
 						<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M40.9997 25.094L9.00024 24.9059" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -22,7 +22,7 @@
 						</svg>
 					</button>
 
-					<button class="quiz__options__start-over" @click="startOver" v-else>
+					<button class="options__start-over" @click="startOver" v-else>
 						<svg width="80" height="80" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M34.5 0C15.4462 0 0 15.4462 0 34.5C0 53.5538 15.4462 69 34.5 69C47.2886 69 58.4424 62.0365 64.4012 51.6995L52.2554 44.7127C48.715 50.8533 42.0973 54.997 34.5 54.997C23.1798 54.997 14.003 45.8202 14.003 34.5C14.003 23.1798 23.1798 14.003 34.5 14.003C39.3523 14.003 43.7996 15.7004 47.3069 18.5218L38.2482 24.9654L69 35.2201V3.08275L58.9852 10.2085C52.7346 3.90724 44.0768 0 34.5 0Z" fill="black"/>
 						</svg>
@@ -32,9 +32,9 @@
 		</section>
 
 		<section class="quiz__score">
-			<div class="quiz__score__title">Score</div>
+			<div class="score__title">Score</div>
 			
-			<div class="quiz__score__points">
+			<div class="score__points">
 				Your score is {{ score }}/3
 			</div>
 		</section>
@@ -125,18 +125,16 @@
 		padding-left: 100px;
 	}
 
-	.quiz__question {
+	.questions__question {
 		width: 30vw;
-	}
-
-	.quiz__question__title {
 		font-size: 3em;
 		font-weight: bold;
 	}
 
-	.quiz__question__query {
-		font-size: 1.3em;
+	.question__query {
 		margin-top: 20px;
+		font-size: 0.6em;
+		font-weight: 100;
 	}
 
 	.quiz__options {
@@ -147,31 +145,31 @@
 		width: 15vw;
 	}
 
-	.quiz__options-option {
+	.options__option {
 		background-color: beige;
 		border: 1px solid beige;
 	}
 
-	.quiz__options-option:hover {
+	.options__option:hover {
 		border: black 1px solid;
 	}
 
-	.quiz__options-option:focus {
+	.options__option:focus {
 		background-color: black;
 		color: white;
 	}
 
-	.quiz__options__buttons {
+	.options__buttons {
 		display: flex;
 		justify-content: right;
 	}
 
-	.quiz__options__start-over {
+	.options__start-over {
 		height: fit-content;
 		margin-top: 150px;
 	}
 
-	.quiz__options__start-over:hover {
+	.options__start-over:hover {
 		transform: rotate(360deg);
 		transition-duration: 1.3s;
 	}
@@ -184,12 +182,12 @@
 		padding-left: 40px;
 	}
 
-	.quiz__score__title {
+	.score__title {
 		font-size: 3em;
 		font-weight: bold;
 	}
 
-	.quiz__score__points {
+	.score__points {
 		font-size: 1.3em;
 		margin-top: 20px;
 		margin-bottom: 20px;
