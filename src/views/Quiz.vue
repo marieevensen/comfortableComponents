@@ -9,7 +9,7 @@
 				</div>
 			</div>
 
-			<div class="quiz__options">
+			<div class="questions__options">
 				<button class="options__option" v-for="option in currentQuestion.options" @click="optionClicked(option)">
 					{{ option }}
 				</button>
@@ -137,7 +137,7 @@
 		font-weight: 100;
 	}
 
-	.quiz__options {
+	.questions__options {
 		display: grid;
 		height: 50vh;
 		margin: 200px 0px 0px 0px;
