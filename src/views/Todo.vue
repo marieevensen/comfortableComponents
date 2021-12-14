@@ -13,14 +13,14 @@
 		</div>
 		<div class="todo__tasks">
 			<div class="todo__tasks__list" v-for="(task, index) in tasks">
+				<div class="input-checkbox">
+  					<input class="input-checkbox__input" type="checkbox" id="task">
+					<label class="input-checkbox__label" for="task">{{ task.text }}</label>
+				</div>
+
 				<button class="todo__delete-button" @click="deleteTask(index)">
 					X
 				</button>
-				
-				<div class="input-checkbox">
-  					<input class="input-checkbox__input" type="checkbox" id="task">
-  					<label class="input-checkbox__label" for="task">{{ task.text }}</label>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -38,8 +38,7 @@
 				if (this.task.length === 0) return;
 
 				this.tasks.push({
-					text: this.task,
-					done: false
+					text: this.task
 				});
 			},
 			deleteTask(index) {
@@ -83,32 +82,19 @@
 	}
 
 	.input-checkbox__input {
-		display: none;
-		border: 1px solid black;
-		
+  		display: none;
 	}
-
 
 	.input-checkbox__label::before {
-		content: 'xx';
-		color: grey;
-		display: 'inline-block';
-		width: 20px;
-		height: 20px;
-		background: grey;
-		border: 1px solid black;
-		border-radius: 100%;
-
-	
-
+		content: 'v';
+		display: 'block';
+		width: 1em;
+		height: 1em;
+		background-color: beige;
 	}
 
-
 	.input-checkbox__input:checked + label::before {
-		content: 'xx';
-		color: black;
-		background: black;
-	
+		content: 'B';
 	}
 
 	.todo__tasks__list {
