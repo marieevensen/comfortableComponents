@@ -74,6 +74,16 @@
 	};
 </script>
 
+<!--
+	1 Lager en computed funksjon
+		1.1 CurrentSlide, returnerer riktig index
+	2 Lager to methods funksjoner
+		2.1 PreviousImage, hvis this.index er samme som 0, så blar den til siste bildet i array,
+			hvis ikke this.index - 1
+		2.2 NextImage, hvis this.index er samme som slides.length - 1, så this.index + 1,
+			hvis ikke 0.
+-->
+
 <style>
 	.slideshow {
 		width: 100vw;

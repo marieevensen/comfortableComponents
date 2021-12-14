@@ -111,6 +111,20 @@
 	};
 </script>
 
+<!--
+	1 Lager to computed funksjoner
+		1.1 CurrentQuestion, returnerer riktig index
+		1.2 CorrectAnswer, returner riktig svar utifra options
+	2 Lager fem methods funksjoner
+		2.1 OptionClicked, henter option som du trykker på og sier at this.lastOption er option
+		2.2 NextQuestion, kjører to funksjoner
+		2.3 IncreaseIndex, hvis this.index er samme som questions.length - 1, så this.index + 1,
+			og da har vi skrevet at hvis index blir over 3 får man opp en start-over-knapp
+		2.4 UpdateScore, hvis this.score er mindre enn 3 OG lastOption er samme som correctAnswer,
+			så blir scoren + 1, hvis ikke + 0
+		2.5 StartOver, setter index = 0 og score = 0
+-->
+
 <style>
 	.quiz {
  		display: flex;
