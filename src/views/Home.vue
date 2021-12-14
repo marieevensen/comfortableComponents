@@ -1,5 +1,5 @@
 <template>
-<!-- fikk det til!! :D -->
+
     <main class="main">
         <div class="main__grid">
             <div class="main__grid-box">
