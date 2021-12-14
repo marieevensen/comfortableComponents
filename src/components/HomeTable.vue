@@ -1,17 +1,28 @@
 <template>
         <table class="home-table">
-            <thead class="home-thead">
-                <tr class="home-tr">
-                    <td class="home-td"><button @click="sortBy('fname')">First Name</button></td>
-                    <td><button @click="sortBy('lname')">Last Name</button></td>
-                    <td><button @click="sortBy('gender')">Gender</button></td>
-                    <td><button @click="sortBy('job')">Job</button></td>
+            <thead class="home-table__thead">
+                <tr>
+                    <td class="home-tr__td">
+                        <button @click="sortBy('fname')">First Name</button>
+                    </td>
+
+                    <td class="home-tr__td">
+                        <button @click="sortBy('lname')">Last Name</button>
+                    </td>
+                    
+                    <td class="home-tr__td">
+                        <button @click="sortBy('gender')">Gender</button>
+                    </td>
+                    
+                    <td class="home-tr__td">
+                        <button @click="sortBy('job')">Job</button>
+                    </td>
                 </tr>
             </thead>
 
-            <tbody class="home-tbody">
-                <tr class="home-tr" v-for="row in alphabeticalSort">
-                    <td class="home-td" v-for="value in row">{{ value }}</td>
+            <tbody class="home-table__tbody">
+                <tr v-for="row in alphabeticalSort">
+                    <td class="home-tr__td" v-for="value in row">{{ value }}</td>
                 </tr>
             </tbody>
         </table>
@@ -19,7 +30,8 @@
 
 <script>
     const mockData = `[{"fname":"Issie","lname":"Phinnis","gender":"Agender","job":"Accountant I"}, {"fname":"Dyann","lname":"Corriea","gender":"Female","job":"Account Executive"}, {"fname":"Nicholle","lname":"Vallack","gender":"Genderqueer","job":"Research Assistant I"}, {"fname":"Drake","lname":"Cunliffe","gender":"Polygender","job":"Systems Administrator III"}, {"fname":"Bessy","lname":"Goodrum","gender":"Bigender","job":"Human Resources Manager"}, {"fname":"Sydelle","lname":"Duesberry","gender":"Bigender","job":"Programmer Analyst III"}, {"fname":"Crichton","lname":"Le Marchant","gender":"Genderfluid","job":"Editor"}, {"fname":"Aymer","lname":"Thorn","gender":"Genderfluid","job":"Speech Pathologist"}, {"fname":"Kelcie","lname":"Mcmanaman","gender":"Agender","job":"VP Marketing"}]`
-	export default {
+	
+    export default {
 		data() {
 			return {
                 sort: {
@@ -63,7 +75,7 @@
         margin-top: 0;
     }
 
-    .home-thead {
+    .home-table__thead {
         font-weight: bold;
         font-size: 0.4em;
     }
@@ -72,11 +84,11 @@
         color: rgba(0, 0, 0, 0.377);
     }
 
-    .home-tbody {
+    .home-table__tbody {
         font-size: 0.4em;
     }
 
-    .home-td {
+    .home-tr__td {
         padding: 0.7em 1em 0.7em 1em;
     }
 </style>
