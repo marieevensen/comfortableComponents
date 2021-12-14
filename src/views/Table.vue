@@ -1,12 +1,23 @@
 <template>
-    <main class="main-table">
+    <main class="table">
         <table>
             <thead>
                 <tr>
-                    <td><button @click="sortBy('fname')">First Name</button></td>
-                    <td><button @click="sortBy('lname')">Last Name</button></td>
-                    <td><button @click="sortBy('gender')">Gender</button></td>
-                    <td><button @click="sortBy('job')">Job</button></td>
+                    <td>
+                        <button @click="sortBy('fname')">First Name</button>
+                    </td>
+                    
+                    <td>
+                        <button @click="sortBy('lname')">Last Name</button>
+                    </td>
+                    
+                    <td>
+                        <button @click="sortBy('gender')">Gender</button>
+                    </td>
+                    
+                    <td>
+                        <button @click="sortBy('job')">Job</button>
+                    </td>
                 </tr>
             </thead>
 
@@ -60,7 +71,7 @@
 </script>
 
 <style>
-    .main-table {
+    .table {
         width: 100vw;
     }
 
@@ -72,19 +83,10 @@
         margin-right: auto;
     }
 
-    @media  screen and (min-width: 768px) {
-        table {
-            margin-top: 50px;
-            border-collapse: collapse;
-            width: 70vw;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-
-    table thead {
+    thead {
         font-weight: bold;
         font-size: 0.9em;
+        width: 80vw;
     }
 
     table button:hover {
@@ -93,6 +95,7 @@
 
     table tbody {
         font-size: 0.8em;
+        width: 80vw;
     }
 
     table tr {

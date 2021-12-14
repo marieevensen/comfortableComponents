@@ -1,5 +1,5 @@
 <template>
-  	<div class="quiz">
+  	<main class="quiz">
 		<section class="quiz__questions">
 			<div class="questions__question">
 				Quiz
@@ -38,7 +38,7 @@
 				Your score is {{ score }}/3
 			</div>
 		</section>
-    </div>
+    </main>
 </template>
 
 <script>

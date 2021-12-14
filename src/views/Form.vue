@@ -65,6 +65,13 @@
 	};
 </script>
 
+<!--
+	1 Lager et objekt: form, med ulike keys, value er null
+	2 Skriver inn i v-model
+	3 V-model endrer key-value fra null til det som skrives inn i inputen
+	4 Deretter hentes data fra formen og legges inn i output
+-->
+
 <style>
 	.form {
 		display: flex;

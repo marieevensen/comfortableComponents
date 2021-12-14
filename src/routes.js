@@ -5,7 +5,6 @@ import Form from './views/Form.vue';
 import Slideshow from './views/Slideshow.vue';
 import Home from './views/Home.vue';
 
-
 export default [
     { name: 'todo', path: '/todo', component: Todo },
     { name: 'table', path: '/table', component: Table },
@@ -14,5 +13,3 @@ export default [
     { name: 'slideshow', path: '/slideshow', component: Slideshow },
     { name: 'home', path: '/', component: Home}
 ]
-
-// dette er en test komentar :)

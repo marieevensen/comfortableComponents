@@ -1,31 +1,31 @@
 <template>
-        <table class="home-table">
-            <thead class="home-table__thead">
-                <tr>
-                    <td class="home-tr__td">
-                        <button @click="sortBy('fname')">First Name</button>
-                    </td>
+    <table class="home-table">
+        <thead class="home-table__thead">
+            <tr>
+                <td class="home-tr__td">
+                    <button @click="sortBy('fname')">First Name</button>
+                </td>
 
-                    <td class="home-tr__td">
-                        <button @click="sortBy('lname')">Last Name</button>
-                    </td>
+                <td class="home-tr__td">
+                    <button @click="sortBy('lname')">Last Name</button>
+                </td>
                     
-                    <td class="home-tr__td">
-                        <button @click="sortBy('gender')">Gender</button>
-                    </td>
+                <td class="home-tr__td">
+                    <button @click="sortBy('gender')">Gender</button>
+                </td>
                     
-                    <td class="home-tr__td">
-                        <button @click="sortBy('job')">Job</button>
-                    </td>
-                </tr>
-            </thead>
+                <td class="home-tr__td">
+                    <button @click="sortBy('job')">Job</button>
+                </td>
+            </tr>
+        </thead>
 
-            <tbody class="home-table__tbody">
-                <tr v-for="row in alphabeticalSort">
-                    <td class="home-tr__td" v-for="value in row">{{ value }}</td>
-                </tr>
-            </tbody>
-        </table>
+        <tbody class="home-table__tbody">
+            <tr v-for="row in alphabeticalSort">
+                <td class="home-tr__td" v-for="value in row">{{ value }}</td>
+            </tr>
+        </tbody>
+    </table>
 </template>
 
 <script>
