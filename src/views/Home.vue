@@ -65,7 +65,6 @@
     @media screen and (min-width: 768px) {
         .main {
             margin-top: 35px;
-            background: chartreuse;
         }
     }
 
