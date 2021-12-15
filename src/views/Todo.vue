@@ -45,6 +45,15 @@
 	};
 </script>
 
+<!--
+	1 Starter med et tomt array
+	2 Lager en addTask() funkjson
+	3 If settningen gjør at hvis lengden er 0 så returneres ingenting
+	4 Det mann skriver inn blir pushet til listen som text og returnert på skjermen
+	5 Lager funskjonen deleteTask()
+	6 Bruker splice for å slette oppgaven med riktig index
+-->
+
 <style>
 	.todo {
 		width: 100vw;
