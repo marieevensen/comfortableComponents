@@ -62,6 +62,19 @@
         width: 100vw;
     }
 
+    @media screen and (min-width: 768px) {
+        .main {
+            margin-top: 35px;
+            background: chartreuse;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .main__grid {
+            display: flex;
+        }
+    }
+
     .grid__box {
         border: 1px black solid;
         width: 90vw;
@@ -78,10 +91,19 @@
         overflow-y: scroll;
     }
 
+    @media screen and (min-width: 768px) {
+        .grid__box, .grid__box--todo {
+            justify-content: space-between;
+            width: 30vw;
+            height: 38vh;
+            margin: 10px
+        }
+    }
+
     .grid__box--black {
         border: 1px black solid;
         justify-content: space-between;
-        width: 30vw;
+        width: 90vw;
         height: 38vh;
         margin: 10px;
         background-color: black;
@@ -90,22 +112,9 @@
         padding-top: 110px;
     }
 
-@media screen and (min-width: 768px) {
-    .main {
-        width: 100vw;
-        margin-top: 35px;
-        background: chartreuse;
+    @media screen and (min-width: 768px) {
+        .grid__box--black {
+            width: 30vw;
+        }
     }
-
-    .main__grid {
-        display: flex;
-    }
-
-    .grid__box, .grid__box--todo {
-        justify-content: space-between;
-        width: 30vw;
-        height: 38vh;
-        margin: 10px
-    }
-}
 </style>
