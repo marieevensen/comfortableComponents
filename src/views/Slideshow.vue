@@ -37,19 +37,19 @@
 					{
 						title: "img1",
 						caption: "Dette er bilde 1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-						file: "public/img1.jpg",
+						file: "/img1.jpg",
 						alt: "picture of orange-drink"
 					},
 					{
 						title: "img2",
 						caption: "Dette er bilde 2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-						file: "public/img2.jpg",
+						file: "/img2.jpg",
 						alt: "picture of orange apartement building"
 					},
 					{
 						title: "img3",
 						caption: "Dette er bilde 3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-						file: "public/img3.jpg",
+						file: "/img3.jpg",
 						alt: "picture of windows"
 					},
 				],
