@@ -7,7 +7,7 @@
 <template>
     <main class="main">
         <div class="main__grid">
-            <div class="grid__box">
+            <div class="grid__box--todo">
                 <HomeTodo />
             </div>
 
@@ -60,14 +60,21 @@
         align-items: center;
         justify-content: center;
         width: 100vw;
-        margin-top: 10px;
     }
 
     .grid__box {
         border: 1px black solid;
         width: 90vw;
-        height: 38vh;
-        margin: 10px;
+        height: fit-content;
+        margin: 20px 10px;
+        overflow-y: scroll;
+    }
+
+    .grid__box--todo {
+        border: 1px black solid;
+        width: 90vw;
+        height: 34vh;
+        margin: 20px 10px;
         overflow-y: scroll;
     }
 
@@ -94,9 +101,11 @@
         display: flex;
     }
 
-    .grid__box {
+    .grid__box, .grid__box--todo {
         justify-content: space-between;
         width: 30vw;
+        height: 38vh;
+        margin: 10px
     }
 }
 </style>
