@@ -2,21 +2,21 @@
 	<form class="home-contact-form">
 		<h1 class="home-contact-form__title">Sign up for the Weekly Newsletter</h1>
 
-			<input class="home-contact-form__input" type="text" placeholder="Name" v-model="form.name" value required />
+		<input class="home-contact-form__input" type="text" placeholder="Name" v-model="form.name" value required />
 			
-			<input class="home-contact-form__input" type="email" placeholder="E-mail" v-model="form.email" value required/>
+		<input class="home-contact-form__input" type="email" placeholder="E-mail" v-model="form.email" value required/>
 			
-			<input class="home-contact-form__input" type="text" placeholder="Country" v-model="form.country" value required/>
+		<input class="home-contact-form__input" type="text" placeholder="Country" v-model="form.country" value required/>
 			
-			<input class="home-contact-form__input" type="text" placeholder="City" v-model="form.city" value required/>
+		<input class="home-contact-form__input" type="text" placeholder="City" v-model="form.city" value required/>
 			
-			<input class="home-contact-form__input" type="number" placeholder="Zip Code" v-model="form.zipCode" value required/>
+		<input class="home-contact-form__input" type="number" placeholder="Zip Code" v-model="form.zipCode" value required/>
 			
-			<input class="home-contact-form__input" type="text" placeholder="Street" v-model="form.street" value required/>
+		<input class="home-contact-form__input" type="text" placeholder="Street" v-model="form.street" value required/>
 			
-			<input class="home-contact-form__input" type="number" placeholder="House Number" v-model="form.houseNumber" value required/>	
-			
-			<button class="home-contact-info__button">Submit</button>
+		<input class="home-contact-form__input" type="number" placeholder="House Number" v-model="form.houseNumber" value required/>	
+		
+		<button class="home-contact-info__button">Submit</button>
 	</form>
 </template>
 

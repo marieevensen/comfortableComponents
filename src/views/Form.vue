@@ -30,8 +30,6 @@
 			<div class="contact-info__output">{{ form.zipCode }} {{ form.city }}</div>
 			
 			<div class="contact-info__output">{{ form.country }}</div>
-			
-			
 		</section>
 	</main>
 </template>

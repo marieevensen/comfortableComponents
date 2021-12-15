@@ -70,13 +70,14 @@
         }
 	}
 </script>
+
 <!-- 
-    1 laget en liste med objekter
-    2 tabbelen er default sortert etter fname
-    3 lager verdien til mockData
-    4 verdiene blir sortert utifra bokstavenes index
-    5 så blir det returnert 
-    6 sortBy aktiverer sortering 
+    1 Lager en liste med objekter: mockData
+    2 Tabellen er default sortert etter fname
+    3 Parse lager verdien til mockData
+    4 Verdiene blir sortert utifra bokstavenes index
+    5 Deretter blir det returnert 
+    6 Funksjonen sortBy aktiverer sorteringen
 -->
 
 <style>

@@ -1,6 +1,6 @@
 <!--
     Vi valgte å gjøre kun forsiden responsiv, slik at når man er på forsiden
-    kan gjøre den til mobilversjon, da ser man alle komponentene der.
+    kan den gjøres til mobilversjon, da ser man alle komponentene der.
     Istedenfor at hver side er responsiv.
 -->
 
