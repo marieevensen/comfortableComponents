@@ -18,7 +18,7 @@
 			
 		<input class="home-contact-form__input" type="houseNumber" placeholder="House Number" v-model="form.houseNumber"/>			
 
-		<button class="home-contact-form__button" @click="submit_form" value="Reset" type="reset">
+		<button class="home-contact-form__button" @click="submitForm" value="Reset" type="reset">
 			Submit
 		</button>
 	</main>
@@ -28,24 +28,25 @@
 	export default {
 		data() {
 			return {
-			form: {
-				name: null,
-				email: null,
-				dateOfBirth: null,
-				country: null,
-				city: null,
-				zipCode: null,
-				street: null,
-				houseNumber: null,
-				area: null,
-				message: null,
-			},
-		};
-	},
+				form: {
+					name: null,
+					email: null,
+					dateOfBirth: null,
+					country: null,
+					city: null,
+					zipCode: null,
+					street: null,
+					houseNumber: null,
+					area: null,
+					message: null,
+				},
+			};
+		},
 
-	methods: {
-		submit_form() {
-		alert(`Welcome to our newsletter, ${this.form.name}!`);
+		methods: {
+			submitForm() {
+				alert(`Welcome to our newsletter, ${this.form.name}!`);
+				
 			},
 		},
 	};
@@ -65,6 +66,7 @@
 
 	.home-contact-form__input {
 		margin: 2.5px;
+		margin-top: 6px;
 		font-size: 0.7em;
 	}
 </style>

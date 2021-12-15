@@ -1,31 +1,29 @@
 <template>
 	<main class="form">
-		<section class="form__contact-form">
+		<form class="form__contact-form">
 			<h1 class="contact-form__title">Sign up for the Weekly Newsletter</h1>
 
-			<input class="contact-form__input" type="name" placeholder="Name" v-model="form.name"/>
+			<input class="contact-form__input" type="text" placeholder="Name" v-model="form.name" value required />
 			
-			<input class="contact-form__input" type="email" placeholder="E-mail" v-model="form.email"/>
+			<input class="contact-form__input" type="email" placeholder="E-mail" v-model="form.email" value required/>
 			
-			<input class="contact-form__input" type="dateOfBirth" placeholder="Date of birth (dd/mm/yy)" v-model="form.dateOfBirth"/>
+			<input class="contact-form__input" type="text" placeholder="Country" v-model="form.country" value required/>
 			
-			<input class="contact-form__input" type="country" placeholder="Country" v-model="form.country"/>
+			<input class="contact-form__input" type="text" placeholder="City" v-model="form.city" value required/>
 			
-			<input class="contact-form__input" type="city" placeholder="City" v-model="form.city"/>
+			<input class="contact-form__input" type="number" placeholder="Zip Code" v-model="form.zipCode" value required/>
 			
-			<input class="contact-form__input" type="zipCode" placeholder="Zip Code" v-model="form.zipCode"/>
+			<input class="contact-form__input" type="text" placeholder="Street" v-model="form.street" value required/>
 			
-			<input class="contact-form__input" type="street" placeholder="Street" v-model="form.street"/>
+			<input class="contact-form__input" type="number" placeholder="House Number" v-model="form.houseNumber" value required/>	
 			
-			<input class="contact-form__input" type="houseNumber" placeholder="House Number" v-model="form.houseNumber"/>			
-		</section>
+			<button class="contact-info__button">Submit</button>		
+		</form>
 
 		<section class="form__contact-info">
 			<div class="contact-info__output">{{ form.name }}</div>
 			
 			<div class="contact-info__output">{{ form.email }}</div>
-			
-			<div class="contact-info__output">Born in {{ form.dateOfBirth }}</div>
 			
 			<div class="contact-info__output">Lives in {{ form.street }} {{ form.houseNumber }}</div>
 			
@@ -33,7 +31,7 @@
 			
 			<div class="contact-info__output">{{ form.country }}</div>
 			
-			<button class="contact-info__button" @click="submit_form">Submit</button>
+			
 		</section>
 	</main>
 </template>
@@ -45,23 +43,14 @@
 				form: {
 					name: null,
 					email: null,
-					dateOfBirth: null,
 					country: null,
 					city: null,
 					zipCode: null,
 					street: null,
 					houseNumber: null,
-					area: null,
-					message: null,
 				},
 			};
-		},
-		
-		methods: {
-			submit_form() {
-				alert(`Welcome to our newsletter, ${this.form.name}!`);
-			},
-		},
+		}
 	};
 </script>
 

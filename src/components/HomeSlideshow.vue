@@ -84,4 +84,10 @@
 	.home-slideshow__img {
 		height: 240px;
 	}
+
+	@media screen and (min-width: 768px) {
+		.home-slideshow__img {
+			height: 280px;
+		}
+	}
 </style>

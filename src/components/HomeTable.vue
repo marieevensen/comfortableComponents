@@ -77,7 +77,8 @@
 
     @media screen and (min-width: 768px) {
         .home-table {
-            width: 30vw;
+            width: 100%;
+            height: 100%;
         }
     }
 

@@ -40,6 +40,7 @@
                     key: 'fname',
                     order: 'asc'
                 },
+
                 content: JSON.parse(mockData)
             }
 		},
