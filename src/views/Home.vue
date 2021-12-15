@@ -49,6 +49,8 @@
 </script>
 
 <style>
+
+@media screen and (min-width: 768px) {
     .main {
         display: grid;
         align-items: center;
@@ -81,4 +83,5 @@
         text-align: center;
         padding-top: 110px;
     }
+}
 </style>
