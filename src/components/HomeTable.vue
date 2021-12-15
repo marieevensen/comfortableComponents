@@ -71,8 +71,14 @@
 <style>
     .home-table {
         border-collapse: collapse;
-        width: 30vw;
+        width: 100%;
         margin-top: 0;
+    }
+
+    @media screen and (min-width: 768px) {
+        .home-table {
+            width: 30vw;
+        }
     }
 
     .home-table__thead {
