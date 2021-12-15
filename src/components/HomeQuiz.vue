@@ -88,13 +88,26 @@
 
 <style>
 	.home-quiz {
- 		display: flex;
         margin: 15px;
 	}
 
+	@media screen and (min-width: 768px) {
+		.home-quiz {
+ 			display: flex;
+        	margin: 15px;
+		}
+	}
+
 	.home-quiz__question {
-		width: 17vw;
-		font-size: 1em;
+		width: 100%;
+		font-size: 0.9em;
+	}
+
+	@media screen and (min-width: 768px) {
+		.home-quiz__question {
+			width: 17vw;
+			font-size: 1em;
+		}
 	}
 
 	.home-quiz__options {
@@ -102,8 +115,14 @@
 		display: grid;
 		height: 30vh;
 		margin-top: 30px;
-		width: 10vw;
+		width: 50%;
 		grid-gap: 10px;
+	}
+
+	@media screen and (min-width: 768px) {
+		.home-quiz__options {
+			width: 10vw;
+		}
 	}
 
 	.home-options__option {
