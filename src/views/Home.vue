@@ -94,7 +94,7 @@
         .grid__box, .grid__box--todo {
             justify-content: space-between;
             width: 30vw;
-            height: 38vh;
+            height: 36vh;
             margin: 10px
         }
     }
