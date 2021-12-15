@@ -17,15 +17,15 @@
 		border: 2px black solid;
 		width: 100vw;
 		text-align: center;
-		padding: 5px 0;
+		padding: 7px 0;
 	}
 
 	.header__link {
 		text-decoration: none;
 		color: var(--color);
 		font-weight: bold;
-		font-size: 0.5em;
-		margin: 0 10px;
+		font-size: 0.6em;
+		margin: 0 5px;
 	}
 
 	@media screen and (min-width: 768px) {
