@@ -14,34 +14,23 @@
 
 <style>
 	.header {
-		border: 2px black solid;
-		width: 100vw;
-		text-align: center;
-		padding: 7px 0;
-	}
-
-	.header__link {
-		text-decoration: none;
-		color: var(--color);
-		font-weight: bold;
-		font-size: 0.6em;
-		margin: 0 5px;
+		display: none;
 	}
 
 	@media screen and (min-width: 768px) {
 		.header {
+			display: flex;
 			border: 2px black solid;
 			padding: 1em 0em 0.4em 0em;
 			width: 100%;
-			text-align: center;
-			justify-content: none;
+			justify-content: center;
 		}
 
 		.header__link {
 			text-decoration: none;
 			color: var(--color);
 			font-weight: bold;
-			margin: 0em 2em;
+			margin: 0 50px;
 			font-size: 1em;
 		}
 	}

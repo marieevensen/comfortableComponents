@@ -1,3 +1,9 @@
+<!--
+    Vi valgte å gjøre kun forsiden responsiv, slik at når man er på forsiden
+    kan gjøre den til mobilversjon, da ser man alle komponentene der.
+    Istedenfor at hver side er responsiv.
+-->
+
 <template>
     <main class="main">
         <div class="main__grid">
@@ -54,7 +60,7 @@
         align-items: center;
         justify-content: center;
         width: 100vw;
-        margin-top: 35px;
+        margin-top: 10px;
     }
 
     .grid__box {
@@ -62,7 +68,7 @@
         width: 90vw;
         height: 38vh;
         margin: 10px;
-        overflow: hidden;
+        overflow-y: scroll;
     }
 
     .grid__box--black {
@@ -79,9 +85,6 @@
 
 @media screen and (min-width: 768px) {
     .main {
-        display: grid;
-        align-items: center;
-        justify-content: center;
         width: 100vw;
         margin-top: 35px;
         background: chartreuse;
@@ -92,24 +95,8 @@
     }
 
     .grid__box {
-        border: 1px black solid;
         justify-content: space-between;
         width: 30vw;
-        height: 38vh;
-        margin: 10px;
-        overflow: hidden;
-    }
-
-    .grid__box--black {
-        border: 1px black solid;
-        justify-content: space-between;
-        width: 30vw;
-        height: 38vh;
-        margin: 10px;
-        background-color: black;
-        color: white;
-        text-align: center;
-        padding-top: 110px;
     }
 }
 </style>
