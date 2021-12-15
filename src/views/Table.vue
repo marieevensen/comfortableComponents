@@ -69,6 +69,14 @@
         }
 	}
 </script>
+<!-- 
+    1 laget en liste med objekter
+    2 tabbelen er default sortert etter fname
+    3 lager verdien til mockData
+    4 verdiene blir sortert utifra bokstavenes index
+    5 så blir det returnert 
+    6 sortBy aktiverer sortering 
+-->
 
 <style>
     .table {
