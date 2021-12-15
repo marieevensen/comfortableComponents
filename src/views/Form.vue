@@ -103,7 +103,6 @@
 	.contact-form__input {
 		width: 50%;
 		margin: 10px;
-		/* border: 1px solid black; */
 	}
 
 	.form__contact-info {
