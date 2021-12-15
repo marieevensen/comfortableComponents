@@ -73,7 +73,12 @@
 	.home-slideshow {
 		display: flex;
 		justify-content: space-evenly;
-		padding-top: 10px;
+	}
+
+	@media screen and (min-width: 768px) {
+		.home-slideshow {
+			padding-top: 10px;
+		}
 	}
 
 	.home-slideshow__img {
