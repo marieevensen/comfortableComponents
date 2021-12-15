@@ -49,6 +49,33 @@
 </script>
 
 <style>
+    .main {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        margin-top: 35px;
+    }
+
+    .grid__box {
+        border: 1px black solid;
+        width: 90vw;
+        height: 38vh;
+        margin: 10px;
+        overflow: hidden;
+    }
+
+    .grid__box--black {
+        border: 1px black solid;
+        justify-content: space-between;
+        width: 30vw;
+        height: 38vh;
+        margin: 10px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding-top: 110px;
+    }
 
 @media screen and (min-width: 768px) {
     .main {
@@ -57,6 +84,7 @@
         justify-content: center;
         width: 100vw;
         margin-top: 35px;
+        background: chartreuse;
     }
 
     .main__grid {
