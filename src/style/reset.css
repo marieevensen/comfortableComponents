@@ -7,3 +7,9 @@
 button {
 	cursor: pointer;
 }
+
+button, input, table {
+	font: inherit;
+	background: transparent;
+	border: none;
+}
