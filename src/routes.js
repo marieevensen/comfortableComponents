@@ -7,7 +7,11 @@ import Home from './views/Home.vue';
 
 export default [
 <<<<<<< HEAD
+<<<<<<< HEAD
     { name: 'home', path: '/', component: Home },
+=======
+    { name: 'home', path: '/home', component: Home },
+>>>>>>> parent of 05dfeaf (template finished)
 
 =======
     { name: 'todo', path: '/todo', component: Todo },
